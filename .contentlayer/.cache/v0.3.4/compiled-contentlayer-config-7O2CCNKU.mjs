@@ -60,41 +60,22 @@ import readingTime from "reading-time";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import GithupSluggr from "github-slugger";
+import GithubSlugger from "github-slugger";
 var Blog = defineDocumentType(() => ({
   name: "Blog",
   filePathPattern: "**/**/*.mdx",
   contentType: "mdx",
   fields: {
-    title: {
-      type: "string",
-      required: true
-    },
-    publishAt: {
-      type: "date",
-      required: true
-    },
-    updatedAt: {
-      type: "date",
-      required: true
-    },
-    description: {
-      type: "date",
-      required: true
-    },
-    image: { type: string, required: true },
-    isPublished: {
-      type: "boolean",
-      default: true
-    },
-    author: {
-      type: "string",
-      required: true
-    },
-    tags: {
-      type: "list",
-      of: { type: "string" }
-    }
+    title: { type: "string", required: true },
+    publishAt: { type: "date", required: true },
+    updatedAt: { type: "date", required: true },
+    description: { type: "string", required: true },
+    // ✅ Fixed
+    image: { type: "string", required: true },
+    // ✅ Fixed
+    isPublished: { type: "boolean", default: true },
+    author: { type: "string", required: true },
+    tags: { type: "list", of: { type: "string" } }
   },
   computedFields: {
     url: {
@@ -109,7 +90,7 @@ var Blog = defineDocumentType(() => ({
       type: "json",
       resolve: async (doc) => {
         const regulrExp = /\n(?<flag>#{1,6})\s+(?<content>.+)/g;
-        const slugger = new GithupSluggr();
+        const slugger = new GithubSlugger();
         const headings = Array.from(doc.body.raw.matchAll(regulrExp)).map(
           ({ groups }) => {
             const flag = groups?.flag;
@@ -131,7 +112,8 @@ var contentlayer_config_default = makeSource({
   documentTypes: [Blog],
   mdx: {
     remarkPlugins: [remarkGfm],
-    rehypePlungins: [
+    rehypePlugins: [
+      // ✅ Fixed typo
       rehypeSlug,
       [rehypeAutolinkHeadings, { behavior: "append" }]
     ]
@@ -140,4 +122,4 @@ var contentlayer_config_default = makeSource({
 export {
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-PS7QTVVL.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-7O2CCNKU.mjs.map
