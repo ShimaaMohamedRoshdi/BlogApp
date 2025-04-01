@@ -12,7 +12,6 @@
     "lint": "next lint",
     "content": "velite --clean",
     "build": "npx velite build && next build"
-
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.12.0",
@@ -24,6 +23,7 @@
     "eslint-config-next": "^15.1.1",
     "gh-pages": "^6.3.0",
     "github-slugger": "^2.0.0",
+    "next": "^15.2.4",
     "next-contentlayer": "^0.3.4",
     "next-sitemap": "^4.2.2",
     "postcss": "^8.4.49",
@@ -46,6 +46,6 @@
     "velite": "^0.2.2"
   },
   "engines": {
-  "node": "18"
-}
+    "node": "18"
+  }
 }

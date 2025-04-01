@@ -16,7 +16,11 @@
             "char": "\"",
             "alternative": "&quot;"
           }
-          // Add more entities as needed
+          ,{
+            "useEslintrc": true,
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+     
         ]
       }
     ]
