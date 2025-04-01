@@ -1,0 +1,28 @@
+// {
+//   "compilerOptions": {
+//     "baseUrl": ".",
+//     "paths": {
+//       "@/*": ["./*"],
+//       "@/.velite/generated/*": ["./.velite/generated/*"]
+//     }
+//   }
+// }
+// {
+//   "compilerOptions": {
+//     "baseUrl": ".",
+//     "paths": {
+//       "@/*": ["./*"],
+//       "@/.velite/generated/*": ["./.velite/generated/*"]
+//     }
+//   }
+// }
+
+{
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "paths": {
+      "@/*": ["./*"],
+      "@/.velite/generated/*": ["./.velite/generated/*"]
+    }
+  }
+}
