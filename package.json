@@ -12,6 +12,7 @@
     "lint": "next lint",
     "content": "velite --clean",
     "build": "npx velite build && next build"
+
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.12.0",
@@ -43,5 +44,8 @@
     "eslint": "^9.23.0",
     "sharp": "^0.32.6",
     "velite": "^0.2.2"
-  }
+  },
+  "engines": {
+  "node": "18"
+}
 }

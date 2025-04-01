@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  // othor next config here...
+ 
+  swcMinify: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? true : false,
   },
