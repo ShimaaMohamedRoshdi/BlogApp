@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-      "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
@@ -43,6 +43,6 @@
     "@tailwindcss/forms": "^0.5.10",
     "encoding": "^0.1.13",
     "sharp": "^0.32.6",
-    "velite": "^0.2.1"
+    "velite": "^0.2.2"
   }
 }
